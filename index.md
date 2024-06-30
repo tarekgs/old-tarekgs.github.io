@@ -1,4 +1,4 @@
 ---
-title: Hey I'm Tarek
+title: Hey, I'm Tarek
 ---
 
