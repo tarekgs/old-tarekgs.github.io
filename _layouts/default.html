@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <meta name="description" content="{{ site.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,23 +10,33 @@
   </head>
   <body>
     <header>
-      <h1><a href="{{ site.baseurl | prepend: site.url }}">{{ site.title }}</a></h1>
-      <nav>
-        <ul>
-          <li><a href="{{ site.baseurl }}/">Home</a></li>
-          <li><a href="{{ site.baseurl }}/blog.html">Blog</a></li>
-        </ul>
-      </nav>
+      <div class=""container">
+          <h1><a href="{{ site.baseurl | prepend: site.url }}">{{ site.title }}</a></h1>
+          <nav>
+            <ul>
+              <li><a href="{{ site.baseurl }}/">Home</a></li>
+              <li><a href="{{ site.baseurl }}/blog.html">Blog</a></li>
+            </ul>
+          </nav>
+      </div>
+
     </header>
     <main>
       {{ content }}
     </main>
     <footer>
-      <p>Thanks for coming! <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-      <p>
-        <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a> |
-        <a href="https://linkedin.com/in/{{ site.linkedin_username }}">LinkedIn</a>
-      </p>
+      <div class="container">
+        <p>Thanks for <span class="highlight">coming!</span></p>
+        <p>{{ site.email }}</p>
+        <div class="social-icons">
+            <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
+                <img src="/assets/images/twitter-icon.png" alt="Twitter">
+            </a>
+            <a href="https://linkedin.com/{{ site.linkedin_username }}" target="_blank">
+                <img src="/assets/images/linkedin-icon.png" alt="GitHub">
+            </a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
